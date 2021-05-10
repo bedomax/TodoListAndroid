@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1059950004388",
+    "project_id": "crudtest-78a45",
+    "storage_bucket": "crudtest-78a45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059950004388:android:2f0e4fab9f668361afbe31",
+        "android_client_info": {
+          "package_name": "com.bedomax.crudfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059950004388-7tn7jla54kdcbapfvt1bsqc5g6t45pn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqNGwt_i8eB0Cea-MMfCvJyzN7zzVd_is"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059950004388-7tn7jla54kdcbapfvt1bsqc5g6t45pn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
