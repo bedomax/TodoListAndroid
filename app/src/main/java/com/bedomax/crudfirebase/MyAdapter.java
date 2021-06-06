@@ -15,23 +15,23 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
+import ToDoList.Entry;
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private  ShowActivity activity;
-    private List<Model> mlist;
+    private List<Entry> mlist;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    public MyAdapter(ShowActivity activity, List<Model> mlist){
+    public MyAdapter(ShowActivity activity, List<Entry> mlist){
         this.activity = activity;
         this.mlist = mlist;
     }
 
     public void updateData(int position){
-        Model item = mlist.get(position);
+        Entry item = mlist.get(position);
         Bundle bundle = new Bundle();
         bundle.putString("uId", item.getId());
         bundle.putString("uTitle", item.getTitle());
@@ -42,7 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     public void deleteData(int position){
-        Model item = mlist.get(position);
+        Entry item = mlist.get(position);
         db.collection("Tasks").document(item.getId()).delete()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

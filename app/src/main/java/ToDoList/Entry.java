@@ -1,11 +1,11 @@
-package com.bedomax.crudfirebase;
+package ToDoList;
 
-public class Model {
+public class Entry {
     String id, title, desc;
-    public Model(){
+    public Entry(){
 
     }
-    public Model(String id, String title, String desc){
+    public Entry(String id, String title, String desc){
         this.id = id;
         this.title = title;
         this.desc = desc;

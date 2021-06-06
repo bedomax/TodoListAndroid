@@ -40,14 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null ){
-            mSaveBtn.setText("Update");
+            mSaveBtn.setText("Actualizar");
             uTitle = bundle.getString("uTitle");
             uId = bundle.getString("uId");
             uDesc = bundle.getString("uDesc");
             mTitle.setText(uTitle);
             mDesc.setText(uDesc);
         }else{
-            mSaveBtn.setText("Save");
+            mSaveBtn.setText("Guardar");
         }
 
         mShowBtn.setOnClickListener(new View.OnClickListener(){

@@ -1,5 +1,6 @@
 package com.bedomax.crudfirebase;
 
+import ToDoList.Entry;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -24,7 +25,7 @@ public class ShowActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private FirebaseFirestore db;
     private MyAdapter adapter;
-    private List<Model> list;
+    private List<Entry> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +52,8 @@ public class ShowActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         list.clear();
                         for(DocumentSnapshot snapshot  : task.getResult()){
-                            Model model = new Model(snapshot.getString("id"), snapshot.getString("title"),snapshot.getString("description"));
-                            list.add(model);
+                            Entry entry = new Entry(snapshot.getString("id"), snapshot.getString("title"),snapshot.getString("description"));
+                            list.add(entry);
                         }
                         Toast.makeText(ShowActivity.this, "Sincronizado", Toast.LENGTH_SHORT).show();
                         adapter.notifyDataSetChanged();
